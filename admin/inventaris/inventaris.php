@@ -20,7 +20,7 @@
             </thead>
             <tbody>
             <?php
-            $query = mysqli_query($koneksi,"SELECT * FROM inventaris ")or die(mysql_error());
+            $query = mysqli_query($koneksi,"SELECT * FROM inventaris ");
             $nomor = 1;
             while($data = mysqli_fetch_array($query)){
                 ?>

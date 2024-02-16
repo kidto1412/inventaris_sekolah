@@ -57,9 +57,13 @@ if (isset($_POST['tambah'])){
     $jumlahInventaris = $resultInventaris['jumlah'];
     $sisaInventaris =  $jumlahInventaris - $jumlah;
 
-    echo $sisaInventaris;
-    mysqli_query($koneksi,"INSERT INTO detail_pinjam VALUES('','$id_peminjaman','$id_inventaris','$jumlah')");
+    mysqli_query($koneksi,"INSERT INTO detail_pinjam VALUES('','$id_inventaris','$id_peminjaman','$jumlah')");
     mysqli_query($koneksi,"UPDATE inventaris SET jumlah = $sisaInventaris  WHERE id_inventaris = $id_inventaris");
-
+?>
+<script type="text/javascript">
+    alert('berhasil pinjam');
+    document.location.href="?page=peminjaman";
+</script>
+<?php
 }
 ?>

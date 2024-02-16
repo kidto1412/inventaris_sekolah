@@ -104,7 +104,7 @@ $data = mysqli_fetch_array($query);
                         <a href="?page=peminjaman">Peminjam</a>
                     </li>
                     <li class="submenu-item ">
-                        <a href="form-validation-parsley.html">Pengembalian</a>
+                        <a href="?page=pengembalian">Pengembalian</a>
                     </li>
                     <li class="submenu-item ">
                         <a href="?page=inventaris">Inventaris</a>
@@ -148,8 +148,14 @@ $data = mysqli_fetch_array($query);
                 case 'pinjam':
                     include 'peminjaman/pinjam.php';
                     break;
+                case 'detail_peminjaman':
+                    include 'peminjaman/detail_peminjaman.php';
+                    break;
                 case 'kembali':
                     include 'peminjaman/kembali.php';
+                    break;
+                case 'pengembalian':
+                    include 'peminjaman/pengembalian.php';
                     break;
                     case 'inventaris':
                     include 'inventaris/inventaris.php';
