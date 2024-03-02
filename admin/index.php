@@ -68,6 +68,20 @@ $data = mysqli_fetch_array($query);
                     <span>Data Pegawai</span>
                 </a>
             </li>
+        <li
+                class="sidebar-item  ">
+            <a href="?page=petugas" class='sidebar-link'>
+                <i class="bi bi-file-earmark-medical-fill"></i>
+                <span>Petugas</span>
+            </a>
+        </li>
+        <li
+                class="sidebar-item  ">
+            <a href="?page=peminjam" class='sidebar-link'>
+                <i class="bi bi-file-earmark-medical-fill"></i>
+                <span>Data Peminjam</span>
+            </a>
+        </li>
             
 
             <li
@@ -78,14 +92,12 @@ $data = mysqli_fetch_array($query);
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item ">
-                        <a href="?page=barang">Buku</a>
+                        <a href="?page=ruang">Ruang</a>
                     </li>
                     <li class="submenu-item ">
-                        <a href="?page=kategori">Kategori</a>
+                        <a href="?page=jenis">Jenis</a>
                     </li>
-                    <li class="submenu-item ">
-                        <a href="?page=lokasi">Lokasi</a>
-                    </li>
+
                 </ul>
             </li>
 
@@ -136,6 +148,27 @@ $data = mysqli_fetch_array($query);
             case 'tambah_pegawai':
             include 'pegawai/tambah pegawai.php';
             break;
+
+            case 'edit_pegawai':
+                include 'pegawai/edit_pegawai.php';
+                break;
+                case 'hapus_pegawai':
+                    include 'pegawai/hapus_pegawai.php';
+                    break;
+                case 'petugas':
+                    include 'petugas/petugas.php';
+                    break;
+
+                case 'tambah_petugas':
+                    include 'petugas/tambah petugas.php';
+                    break;
+
+                case 'edit_petugas':
+                    include 'petugas/edit_petugas.php';
+                    break;
+                case 'hapus_petugas':
+                    include 'petugas/hapus_petugas.php';
+                    break;
 
             //  Peminjaman
             case 'peminjaman':
